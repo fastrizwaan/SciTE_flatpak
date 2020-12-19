@@ -1,5 +1,5 @@
 # SciTE_flatpak
-Scintilla based SciTE GTK flatpak 
+Scintilla based SciTE Text Editor: Scite GTK flatpak 
 
 #### install flathub repo and gnome sdk 3.38
 ```
