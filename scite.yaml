@@ -2,7 +2,6 @@ app-id: org.scintilla.scite
 runtime: org.gnome.Platform
 runtime-version: '3.38'
 sdk: org.gnome.Sdk
-copy-icon: true
 command: SciTE
 
 finish-args:
@@ -12,8 +11,6 @@ finish-args:
   - --share=network
   - --device=dri
   - --filesystem=host
-  - --filesystem=xdg-run/SciTE:create
-  - --filesystem=xdg-config/SciTE:create
   
 modules:
 
@@ -27,10 +24,10 @@ modules:
   - tar -zxf scite446.tgz
   - cd scintilla/gtk && make GTK3=1 -j $FLATPAK_BUILDER_N_JOBS prefix="${FLATPAK_DEST}"
   - cd scite/gtk && make GTK3=1 -j $FLATPAK_BUILDER_N_JOBS prefix="${FLATPAK_DEST}" && make GTK3=1 install prefix="${FLATPAK_DEST}"
+  post-install:
   - ln -sf ${FLATPAK_DEST}/lib/scite/*.so ${FLATPAK_DEST}/lib -v
   - cp ${FLATPAK_DEST}/share/applications/SciTE.desktop ${FLATPAK_DEST}/share/applications/org.scintilla.scite.desktop
   - sed 's/Sci48M/org.scintilla.scite/g' -i ${FLATPAK_DEST}/share/applications/org.scintilla.scite.desktop
   - mkdir -p ${FLATPAK_DEST}/share/icons/hicolor/48x48/apps/
   - cp ${FLATPAK_DEST}/share/pixmaps/Sci48M.png ${FLATPAK_DEST}/share/icons/hicolor/48x48/apps/org.scintilla.scite.png
-
 
