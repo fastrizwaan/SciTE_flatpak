@@ -26,7 +26,7 @@ modules:
   build-commands:
   - tar -zxf scite446.tgz
   - cd scintilla/gtk && make GTK3=1 -j $FLATPAK_BUILDER_N_JOBS prefix="${FLATPAK_DEST}"
-  - cd scite/gtk && make GTK3=1 -j $FL6ATPAK_BUILDER_N_JOBS prefix="${FLATPAK_DEST}" && make GTK3=1 install prefix="${FLATPAK_DEST}"
+  - cd scite/gtk && make GTK3=1 -j $FLATPAK_BUILDER_N_JOBS prefix="${FLATPAK_DEST}" && make GTK3=1 install prefix="${FLATPAK_DEST}"
   - ln -sf ${FLATPAK_DEST}/lib/scite/*.so ${FLATPAK_DEST}/lib -v
   - cp ${FLATPAK_DEST}/share/applications/SciTE.desktop ${FLATPAK_DEST}/share/applications/org.scintilla.scite.desktop
   - sed 's/Sci48M/org.scintilla.scite/g' -i ${FLATPAK_DEST}/share/applications/org.scintilla.scite.desktop
