@@ -20,15 +20,15 @@ flatpak-builder --force-clean build-dir scite.yaml
 flatpak-builder --user --install --force-clean build-dir scite.yaml
 
 # run
-flatpak run org.scintilla.scite
+flatpak run org.scintilla.SciTE
 ```
 
 #### Build a flatpak bundle file from the above built repo:
 ```
 flatpak-builder --repo="repo" --force-clean "build" scite.yaml
 flatpak --user remote-add --no-gpg-verify "scite" "repo"
-flatpak build-bundle "repo" "scite.flatpak" org.scintilla.scite  --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
+flatpak build-bundle "repo" "SciTE.flatpak" org.scintilla.SciTE  --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
 
-flatpak --user install scite.flatpak
-flatpak run org.scintilla.scite
+flatpak --user install SciTE.flatpak
+flatpak run org.scintilla.SciTE
 ```
