@@ -21,10 +21,16 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://upload.wikimedia.org/wikipedia/commons/a/a5/Scite_%281%29.png</image>
+      <image>https://github.com/flathub/org.scintilla.SciTE/blob/master/screenshots/0.png</image>
     </screenshot>
     <screenshot>
-      <image>https://www.scintilla.org/SciTE224.png</image>
+      <image>https://github.com/flathub/org.scintilla.SciTE/blob/master/screenshots/1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://github.com/flathub/org.scintilla.SciTE/blob/master/screenshots/2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://github.com/flathub/org.scintilla.SciTE/blob/master/screenshots/3.png</image>
     </screenshot>
   </screenshots>
   <update_contact>https://github.com/geany/geany</update_contact>

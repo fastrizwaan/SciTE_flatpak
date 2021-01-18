@@ -26,6 +26,8 @@ modules:
     path: org.scintilla.SciTE.png
   - type: file
     path: SciTEGlobal.properties
+  - type: archive
+    path: toolbar-icons.tar.xz
     
   build-commands:
   - cd scintilla/gtk && 
@@ -47,3 +49,15 @@ modules:
            ${FLATPAK_DEST}/lib
   - sed 's/Icon=Sci48M/Icon=org.scintilla.SciTE/g' -i 
     ${FLATPAK_DEST}/share/applications/SciTE.desktop
+
+  - mkdir -p ${FLATPAK_DEST}/share/icons/Adwaita/{22x22,24x24}/
+             ${FLATPAK_DEST}/share/icons/hicolor/22x22/actions
+  - install -Dm644 *.png ${FLATPAK_DEST}/share/icons/hicolor/22x22/actions
+  - ln -sf ${FLATPAK_DEST}/share/icons/hicolor/22x22/actions
+           ${FLATPAK_DEST}/share/icons/Adwaita/22x22/actions
+  - ln -sf ${FLATPAK_DEST}/share/icons/hicolor/22x22/actions
+           ${FLATPAK_DEST}/share/icons/Adwaita/22x22/legacy
+  - ln -sf ${FLATPAK_DEST}/share/icons/hicolor/22x22/actions
+           ${FLATPAK_DEST}/share/icons/Adwaita/24x24/legacy
+  - ln -sf ${FLATPAK_DEST}/share/icons/hicolor/22x22/actions
+           ${FLATPAK_DEST}/share/icons/Adwaita/24x24/actions
